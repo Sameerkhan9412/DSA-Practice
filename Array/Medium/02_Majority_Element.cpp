@@ -1,5 +1,9 @@
 class Solution {
 public:
+
+    // first approcach:using nested loop and count
+    // second approach:uisng hash
+    // third is given below
     int majorityElement(vector<int>& nums) {
         int majority=nums[0];
         int count=1;
