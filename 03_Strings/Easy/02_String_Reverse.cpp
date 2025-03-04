@@ -8,7 +8,7 @@ class Solution {
                 if(s[i]!=' '){
                     word+=s[i];
                 }
-                if(s[i]==' ' && word.size()>0){
+                if((s[i]==' ' && word.size()>0)||((i==(s.size()-1))&&(word.size()>0))){
                     reverse(word.begin(),word.end());
                     ans+=" "+word;
                     word="";
@@ -17,7 +17,6 @@ class Solution {
             return ans.substr(1);
         }
     };
-
     // approach
     step 1:reverse string
     step 2: extract word and reverse and append
