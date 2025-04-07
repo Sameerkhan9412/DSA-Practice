@@ -1,18 +1,17 @@
 class Solution {
     public:
-        ListNode* middleNode(ListNode* head) {
-            if(head==NULL) return NULL;
-            ListNode* fast=head;
-            ListNode* slow=head;
-            while(fast!=NULL){  //ek baar me 2 pointer isliye nhi bdaya bcz may be fast->next agr null hua to fast->next->next kya hoga, that why
-               fast=fast->next;
-               if(fast!=NULL){
-                fast=fast->next;
-                slow=slow->next;
-               }
-                
-            }
-            return slow;
-    
-        }
-    };
+      /* Should return data of middle node. If linked list is empty, then -1 */
+      int getMiddle(Node* head) {
+          // code here
+          if(head==NULL){
+              return -1;
+          }
+          Node* fast=head;
+          Node* slow=head;
+          while(fast!=NULL && fast->next!=NULL){//important ques h
+              slow=slow->next;
+              fast=fast->next->next;
+          }
+          return slow->data;
+      }
+  };
