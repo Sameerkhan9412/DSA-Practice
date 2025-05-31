@@ -1,3 +1,4 @@
+// logic theek h but code run nhi krrha h
 class Solution {
 public:
     bool backspaceCompare(string s, string t) {
